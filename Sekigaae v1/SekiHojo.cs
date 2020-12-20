@@ -16,6 +16,10 @@ namespace Sekigaae
         [STAThread]
         static void Main()
         {
+            if(!Directory.Exists("data\\historys"))
+            {
+                Directory.CreateDirectory("data\\historys");
+            }
             Application.EnableVisualStyles();
             Application.Run(new SGui());
         }
